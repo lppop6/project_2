@@ -1,0 +1,859 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1146</width>
+    <height>593</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>机器人视觉质量检测</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_17">
+    <item row="0" column="0" colspan="2">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>基础成像性能指标测试</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_6">
+        <item row="0" column="0">
+         <widget class="QSplitter" name="splitter_1">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <widget class="QFrame" name="frame">
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_3">
+            <item row="0" column="0">
+             <widget class="QSplitter" name="splitter_2">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <widget class="QGroupBox" name="groupBox">
+               <property name="title">
+                <string>检测类型</string>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_7">
+                <item row="0" column="0">
+                 <widget class="QRadioButton" name="rbn_Distortion">
+                  <property name="text">
+                   <string>畸变检测</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QRadioButton" name="rbn_Chromatic">
+                  <property name="text">
+                   <string>色差检测</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QRadioButton" name="rbn_Resolution">
+                  <property name="text">
+                   <string>分辨率检测</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QRadioButton" name="rbn_GrayScale">
+                  <property name="text">
+                   <string>灰阶检测</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QGroupBox" name="groupBox_5">
+               <property name="title">
+                <string>视觉检测报告表单记录预览</string>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_8">
+                <item row="1" column="0">
+                 <widget class="QFrame" name="frame_4">
+                  <property name="frameShape">
+                   <enum>QFrame::StyledPanel</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Raised</enum>
+                  </property>
+                  <layout class="QGridLayout" name="gridLayout_9">
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="lbl_FormStatus_1">
+                     <property name="text">
+                      <string>尚未完成所有检测项目</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QListWidget" name="lwt_Form_1">
+                  <item>
+                   <property name="text">
+                    <string>基础成像性能指标测试结果</string>
+                   </property>
+                   <property name="textAlignment">
+                    <set>AlignCenter</set>
+                   </property>
+                   <property name="background">
+                    <brush brushstyle="NoBrush">
+                     <color alpha="255">
+                      <red>0</red>
+                      <green>0</green>
+                      <blue>0</blue>
+                     </color>
+                    </brush>
+                   </property>
+                   <property name="foreground">
+                    <brush brushstyle="NoBrush">
+                     <color alpha="255">
+                      <red>32</red>
+                      <green>74</green>
+                      <blue>135</blue>
+                     </color>
+                    </brush>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>分辨率值：                  </string>
+                   </property>
+                   <property name="flags">
+                    <set>ItemIsSelectable|ItemIsEditable|ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>色差检测结果：</string>
+                   </property>
+                   <property name="flags">
+                    <set>ItemIsSelectable|ItemIsEditable|ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>几何失真结果：</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>灰阶值：</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>视频质量评价结果</string>
+                   </property>
+                   <property name="textAlignment">
+                    <set>AlignCenter</set>
+                   </property>
+                   <property name="background">
+                    <brush brushstyle="NoBrush">
+                     <color alpha="255">
+                      <red>0</red>
+                      <green>0</green>
+                      <blue>0</blue>
+                     </color>
+                    </brush>
+                   </property>
+                   <property name="foreground">
+                    <brush brushstyle="NoBrush">
+                     <color alpha="255">
+                      <red>32</red>
+                      <green>74</green>
+                      <blue>135</blue>
+                     </color>
+                    </brush>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>帧频值：                       </string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>码率值：                          </string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>延时值：                           </string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>干扰：</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>马赛克现象：</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>流畅性不足：</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>抖动：</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QFrame" name="frame_2">
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_2">
+            <item row="0" column="0">
+             <widget class="QSplitter" name="splitter_3">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <widget class="QGroupBox" name="groupBox_2">
+               <property name="title">
+                <string>待检测图像</string>
+               </property>
+               <widget class="ImageLabelClass" name="lbl_Image">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>33</y>
+                  <width>30</width>
+                  <height>23</height>
+                 </rect>
+                </property>
+                <property name="text">
+                 <string>图片</string>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QFrame" name="frame_3">
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_5">
+                <item row="0" column="5">
+                 <widget class="QPushButton" name="btn_ChooseAngularPoint">
+                  <property name="text">
+                   <string>辅助选取角点</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="0">
+                 <spacer name="horizontalSpacer_2">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="2" column="0">
+                 <spacer name="horizontalSpacer_4">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="0" column="6">
+                 <widget class="QPushButton" name="btn_ScreenShot">
+                  <property name="text">
+                   <string>截图</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="3">
+                 <widget class="QPushButton" name="btn_ImportImage">
+                  <property name="text">
+                   <string>导入图片</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="7">
+                 <widget class="QPushButton" name="btn_ChooseChromatic">
+                  <property name="text">
+                   <string>辅助选取色块位置</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="7">
+                 <widget class="QPushButton" name="btn_ChromaticComplete">
+                  <property name="text">
+                   <string>完成色块位置选取</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="6">
+                 <widget class="QPushButton" name="btn_ScreenShotComplete">
+                  <property name="text">
+                   <string>完成截图</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="5">
+                 <widget class="QPushButton" name="btn_AngularPointComplete">
+                  <property name="text">
+                   <string>完成角点选取</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="3">
+                 <widget class="QPushButton" name="btn_StartTestImage">
+                  <property name="text">
+                   <string>进行性能检测</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="4">
+                 <widget class="QPushButton" name="btn_RemapImage">
+                  <property name="text">
+                   <string>恢复最初位置</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="4">
+                 <widget class="QPushButton" name="btn_ReChooseAngular">
+                  <property name="text">
+                   <string>清空选取的角点</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>视频质量评价</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_12">
+        <item row="0" column="0">
+         <widget class="QSplitter" name="splitter_5">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <widget class="QFrame" name="frame_5">
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QGridLayout" name="gridLayout">
+            <item row="0" column="0">
+             <widget class="QSplitter" name="splitter_6">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <widget class="QGroupBox" name="groupBox_3">
+               <property name="title">
+                <string>检测类型</string>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_13">
+                <item row="0" column="0">
+                 <widget class="QRadioButton" name="rbn_FrameFreq">
+                  <property name="text">
+                   <string>帧频检测</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QRadioButton" name="rbn_CodeRate">
+                  <property name="text">
+                   <string>码率检测</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QRadioButton" name="rbn_Delayed">
+                  <property name="text">
+                   <string>延时检测</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QRadioButton" name="rbn_SubjectiveAnalysis">
+                  <property name="text">
+                   <string>主观缺陷分析</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QGroupBox" name="groupBox_4">
+               <property name="title">
+                <string>视觉检测报告表单记录预览</string>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_15">
+                <item row="0" column="0">
+                 <widget class="QListWidget" name="lwt_Form_2">
+                  <item>
+                   <property name="text">
+                    <string>基础成像性能指标测试结果</string>
+                   </property>
+                   <property name="textAlignment">
+                    <set>AlignCenter</set>
+                   </property>
+                   <property name="foreground">
+                    <brush brushstyle="NoBrush">
+                     <color alpha="255">
+                      <red>32</red>
+                      <green>74</green>
+                      <blue>135</blue>
+                     </color>
+                    </brush>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>分辨率值：</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>色差检测结果：</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>几何失真结果：</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>灰阶值：</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>视频质量评价结果</string>
+                   </property>
+                   <property name="textAlignment">
+                    <set>AlignCenter</set>
+                   </property>
+                   <property name="foreground">
+                    <brush brushstyle="NoBrush">
+                     <color alpha="255">
+                      <red>32</red>
+                      <green>74</green>
+                      <blue>135</blue>
+                     </color>
+                    </brush>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>帧频值：</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>码率值：</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>延时值：</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>干扰：</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>马赛克现象：</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>流畅性不足：</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>抖动：</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QFrame" name="frame_8">
+                  <property name="frameShape">
+                   <enum>QFrame::StyledPanel</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Raised</enum>
+                  </property>
+                  <layout class="QGridLayout" name="gridLayout_16">
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="lbl_FormStatus_2">
+                     <property name="text">
+                      <string>尚未完成所有检测项目</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QFrame" name="frame_6">
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_10">
+            <item row="0" column="1">
+             <widget class="QSplitter" name="splitter_4">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <widget class="QGroupBox" name="groupBox_6">
+               <property name="title">
+                <string>待检测视频</string>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_14">
+                <item row="0" column="0">
+                 <widget class="QLabel" name="lbl_Video">
+                  <property name="text">
+                   <string>视频</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QFrame" name="frame_7">
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_11">
+                <item row="4" column="2">
+                 <widget class="QLabel" name="lbl_CurFrame">
+                  <property name="text">
+                   <string>0</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="8">
+                 <widget class="QPushButton" name="btn_StartTestVideo">
+                  <property name="text">
+                   <string>进行检测</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="0">
+                 <spacer name="horizontalSpacer_5">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="1" column="10">
+                 <widget class="QPushButton" name="btn_PreviousFrame">
+                  <property name="text">
+                   <string>前一帧</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="4">
+                 <widget class="QPushButton" name="btn_Locate">
+                  <property name="text">
+                   <string>定位</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QLabel" name="lbl_TotalFrameMarked">
+                  <property name="text">
+                   <string>总帧数：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="3">
+                 <spacer name="horizontalSpacer_8">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="4" column="7">
+                 <spacer name="horizontalSpacer_7">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="4" column="5">
+                 <widget class="QLineEdit" name="let_LocateFrameNums"/>
+                </item>
+                <item row="1" column="2">
+                 <widget class="QLabel" name="lbl_TotalFrame">
+                  <property name="text">
+                   <string>0</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="8">
+                 <widget class="QPushButton" name="btn_ImportVideo">
+                  <property name="text">
+                   <string>导入视频</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="0" colspan="13">
+                 <widget class="QFrame" name="frame_9">
+                  <property name="frameShape">
+                   <enum>QFrame::StyledPanel</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Raised</enum>
+                  </property>
+                  <layout class="QGridLayout" name="gridLayout_4">
+                   <item row="0" column="0">
+                    <widget class="QSliderClass" name="sld_ProgressBar">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLabel" name="lbl_curTime">
+                     <property name="text">
+                      <string>00:00</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="2">
+                    <widget class="QLabel" name="lbl_ooo">
+                     <property name="text">
+                      <string>/</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="3">
+                    <widget class="QLabel" name="lbl_totalTime">
+                     <property name="text">
+                      <string>00:00</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item row="4" column="10">
+                 <widget class="QPushButton" name="btn_NextFrame">
+                  <property name="text">
+                   <string>后一帧</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <spacer name="horizontalSpacer_3">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="4" column="1">
+                 <widget class="QLabel" name="lbl_curFrameMarked">
+                  <property name="text">
+                   <string>当前帧：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="6">
+                 <widget class="QPushButton" name="btn_stopVideo">
+                  <property name="text">
+                   <string>停止播放</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="5">
+                 <spacer name="horizontalSpacer_6">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="1" column="9">
+                 <widget class="QPushButton" name="btn_pauseVideo">
+                  <property name="text">
+                   <string>暂停播放</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="9">
+                 <widget class="QPushButton" name="btn_resumeVideo">
+                  <property name="text">
+                   <string>继续播放</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="11">
+                 <widget class="QPushButton" name="btn_goto_next_5s">
+                  <property name="text">
+                   <string>快进30帧</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="11">
+                 <widget class="QPushButton" name="btn_goto_pre_5s">
+                  <property name="text">
+                   <string>快退30帧</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="12">
+                 <widget class="QPushButton" name="btn_1X">
+                  <property name="text">
+                   <string>常速播放</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="12">
+                 <widget class="QPushButton" name="btn_2X">
+                  <property name="text">
+                   <string>慢速播放</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>915</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="1" column="1">
+     <widget class="QPushButton" name="btn_HandIn">
+      <property name="text">
+       <string>提交评价结果并生成检测表单</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ImageLabelClass</class>
+   <extends>QLabel</extends>
+   <header location="global">imagelabelclass.h</header>
+  </customwidget>
+  <customwidget>
+   <class>QSliderClass</class>
+   <extends>QSlider</extends>
+   <header>qsliderclass.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
